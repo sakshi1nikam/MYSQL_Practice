@@ -19,3 +19,18 @@ FROM product
 WHERE low_fat = 'Y' AND recyclable = 'Y' ;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Write Query to find customer not with referee_id 2 :-
+
+SELECT name 
+FROM Customers
+WHERE referee_id <> 2 OR Referee_id IS NULL;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Write Query to find customer id who never order :-
+
+SELECT Customer.name AS Customers
+FROM Customer
+WHERE Customer.id NOT IN (SELECT customerid FROM Orders);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

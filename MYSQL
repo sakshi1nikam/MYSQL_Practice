@@ -81,3 +81,18 @@ GROUP BY sell_date
 ORDER BY sell_date ASC
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find Patient ID , name and condition who has type 1 diabetes :- ( type 1 diabetic patient have DIAB1 code in condition )
+
+SELECT *
+FROM Patient
+WHERE condition LIKE '% DIAB1%' OR Condition LIKE 'DIAB1%';
+
+
+or 
+
+
+SELECT *
+FROM patient
+WHERE condition REGEXP '\\bDIAB1';
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
